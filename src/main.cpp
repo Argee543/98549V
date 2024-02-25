@@ -72,20 +72,63 @@ void competition_initialize() {}
  * from where it left off.
  */
 
+
 void autonomous() {
 	//chassis.turnTo(90,53,1000);
 	//chassis.moveTo(0,25,5000);
-	chassis.setPose(0,0,0);
-	chassis.moveTo(0, 0, 5000);
-	chassis.moveTo(-6.458, 21.957, 5000);
-	chassis.moveTo(-21.44, 19.632, 5000);
+	chassis.setPose(-37.565, -62.886,0);
+
+	// Go to shooting spot
+	chassis.moveTo(-37.565, -62.886, 5000);
+	chassis.moveTo(-43.093, -33.151, 5000);
+	chassis.moveTo(-59.676, -40.394, 5000);
+
+	//Shoot code
 	chassis.turnTo(70.146,55.467,5000,true);
 	Cata = 93;
 	Cata2 = -93;
 	pros::delay(25000);
 	Cata = 0;
 	Cata2 = 0;
-	chassis.moveTo(27.123, 27.898, 5000);
+
+	// Go to mid bar
+	chassis.moveTo(-12.214, -34.866, 5000);
+
+	//Open back wings
+	backleftWing = true;
+
+	//Push fails
+	chassis.moveTo(-11.833, 36.041, 5000);
+	// Set under push
+	chassis.moveTo(-56.055, 39.662, 5000);
+	chassis.moveTo(-43.474, 57.58, 5000);
+	//Left side push
+	chassis.moveTo(40.013, 57.77, 5000);
+	chassis.moveTo(51.068, 49.574, 5000);
+	chassis.moveTo(57.93, 33.372, 5000);
+	//Set first mid push
+	chassis.moveTo(40.775, 44.046, 5000);
+	chassis.moveTo(9.325, 32.038, 5000);
+	//First mid push
+	chassis.moveTo(25.717, 13.358, 5000);
+	chassis.moveTo(38.297, 0.968, 5000);
+	//set second mid push
+	chassis.moveTo(10.468, 0.587, 5000);
+	chassis.moveTo(11.421, -30.864, 5000);
+	//second mid push
+	chassis.moveTo(27.623, -11.612, 5000);
+	chassis.moveTo(39.25, -9.706, 5000);
+	//set right push
+	chassis.moveTo(31.817, -35.819, 5000);
+	chassis.moveTo(43.063, -58.883, 5000);
+	//right push
+	chassis.moveTo(60.218, -31.626, 5000);
+	//Go climb
+	chassis.moveTo(22.477, -61.361, 5000);
+	chassis.moveTo(-0.396, -61.933, 5000);
+
+
+	
 
 
     //chassis.setPose(-62.67588961038961, -39.601183982683985, 0);
