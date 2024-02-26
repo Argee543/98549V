@@ -13,6 +13,8 @@ pros::Motor intake(11, pros::E_MOTOR_GEARSET_18, true);
 pros::ADIDigitalOut frontWings(1);
 pros::ADIDigitalOut backleftWing(2);
 pros::ADIDigitalOut backrightWing(3);
+pros::ADIDigitalOut leftCLimb(4);
+pros::ADIDigitalOut righttCLimb(5);
 
 // motor_group
 pros::MotorGroup left_side_motors({leftFront,leftMiddle,leftBack});

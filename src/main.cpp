@@ -92,14 +92,16 @@ void autonomous() {
 	Cata2 = 0;
 
 	// Go to mid bar
+	intake = -127;
 	chassis.moveTo(-12.214, -34.866, 5000);
 
 	//Open back wings
-	backleftWing = true;
+	frontWings = true;
 
 	//Push fails
 	chassis.moveTo(-11.833, 36.041, 5000);
 	// Set under push
+	frontWings = false;
 	chassis.moveTo(-56.055, 39.662, 5000);
 	chassis.moveTo(-43.474, 57.58, 5000);
 	//Left side push
@@ -109,24 +111,35 @@ void autonomous() {
 	//Set first mid push
 	chassis.moveTo(40.775, 44.046, 5000);
 	chassis.moveTo(9.325, 32.038, 5000);
+	chassis.turnTo(25.717, 13.358,5000);
+	backleftWing = true;
+	backrightWing = true;
 	//First mid push
 	chassis.moveTo(25.717, 13.358, 5000);
 	chassis.moveTo(38.297, 0.968, 5000);
+	backleftWing = false;
+	backrightWing = false;
 	//set second mid push
 	chassis.moveTo(10.468, 0.587, 5000);
 	chassis.moveTo(11.421, -30.864, 5000);
+	chassis.turnTo(27.623, -11.612 ,5000);
+	frontWings = true;
 	//second mid push
 	chassis.moveTo(27.623, -11.612, 5000);
 	chassis.moveTo(39.25, -9.706, 5000);
 	//set right push
+	frontWings = false;
 	chassis.moveTo(31.817, -35.819, 5000);
 	chassis.moveTo(43.063, -58.883, 5000);
 	//right push
 	chassis.moveTo(60.218, -31.626, 5000);
 	//Go climb
 	chassis.moveTo(22.477, -61.361, 5000);
-	chassis.moveTo(-0.396, -61.933, 5000);
-
+	leftCLimb = true;
+	righttCLimb = true;
+	chassis.moveTo(-10.396, -61.933, 5000);
+	leftCLimb = false;
+	righttCLimb = false;
 
 	
 
